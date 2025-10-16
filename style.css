@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #fafafa;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* faz o scroll suave ao clicar no menu */
+}
+
+/* ---------- CABEÇALHO (HEADER) ---------- */
+header {
+  position: fixed; /* mantém o menu sempre visível */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffffcc; /* branco com leve transparência */
+  backdrop-filter: blur(10px); /* efeito de vidro fosco */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #8b5e3c; /* tom amadeirado elegante */
+}
+
+/* ---------- SECÇÕES ---------- */
+section {
+  padding: 100px 60px;
+  min-height: 100vh; /* ocupa sempre a altura total da janela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* ---------- AJUSTE PARA O HEADER FIXO ---------- */
+section:first-of-type {
+  margin-top: 80px; /* evita que o menu tape o início */
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.hero {
+  background: url("imagens/fundo-madeira.jpg") center/cover no-repeat; /* substitui pela tua imagem */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* sobreposição escura para dar contraste */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #8b5e3c;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #734a2e;
+}
+
+#servicos {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#servicos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.servico-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.servico-card h3 {
+  color: #8b5e3c;
+  margin-bottom: 10px;
+}
+
+.servico-card p {
+  color: #444;
+}
+
+#sobre {
+  background-color: #fff;
+  padding: 100px 60px;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.sobre-texto p {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.sobre-imagem {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+#contactos {
+  background-color: #f7f7f7;
+  padding: 100px 60px;
+}
+
+.contactos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.contactos-texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.contactos-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.contactos-texto p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contactos-texto ul {
+  list-style: none;
+  padding: 0;
+  color: #333;
+}
+
+.contactos-texto li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.form-contacto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.form-contacto button {
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background-color: #734a2e;
+}
+
+/* MENU / HEADER */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+/* HERO */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+/* SERVIÇOS */
+@media (max-width: 768px) {
+  .servicos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* SOBRE NÓS */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-imagem {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* CONTACTOS */
+@media (max-width: 768px) {
+  .contactos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .form-contacto, .contactos-texto {
+    max-width: 90%;
+  }
+}
+
+/* FOOTER */
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
